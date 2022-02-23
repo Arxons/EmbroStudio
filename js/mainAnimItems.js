@@ -1,24 +1,28 @@
-import { offset } from "./offSet_function.js";
+import { offset } from './offSet_function.js';
 
-const allAnimItems = document.querySelectorAll('.anim')
+const allAnimItems = document.querySelectorAll('.anim');
 
-window.addEventListener('scroll', animate)
+window.addEventListener('scroll', animate);
 
 function animate() {
-    allAnimItems.forEach((el, i) => {
-        const animItem = allAnimItems[i];
-        const animHeight = animItem.offsetHeight;
-        const animItemOffset = offset(animItem).top;
-        const animStartCo = 2;
+  allAnimItems.forEach((el, i) => {
+    const animItem = allAnimItems[i];
+    const animHeight = animItem.offsetHeight;
+    const animItemOffset = offset(animItem).top;
+    const animStartCo = 2;
 
-        let animItemStartPoint = window.innerHeight - animHeight / animStartCo;
+    let animItemStartPoint = window.innerHeight - animHeight / animStartCo;
 
-        if (animHeight > window.innerHeight) {
-            animItemStartPoint = window.innerHeight - window.innerHeight / animStartCo;
-        }
+    if (animHeight > window.innerHeight) {
+      animItemStartPoint =
+        window.innerHeight - window.innerHeight / animStartCo;
+    }
 
-        if ((scrollY > animItemOffset - animItemStartPoint) && screenY < animItemOffset + animHeight) {
-            animItem.classList.add('active')
-        }
-    })
+    if (
+      scrollY > animItemOffset - animItemStartPoint &&
+      screenY < animItemOffset + animHeight
+    ) {
+      animItem.classList.add('active');
+    }
+  });
 }

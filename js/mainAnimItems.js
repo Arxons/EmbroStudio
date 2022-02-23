@@ -14,14 +14,10 @@ function animate() {
     let animItemStartPoint = window.innerHeight - animHeight / animStartCo;
 
     if (animHeight > window.innerHeight) {
-      animItemStartPoint =
-        window.innerHeight - window.innerHeight / animStartCo;
+      animItemStartPoint = window.innerHeight - window.innerHeight / animStartCo;
     }
 
-    if (
-      scrollY > animItemOffset - animItemStartPoint &&
-      screenY < animItemOffset + animHeight
-    ) {
+    if (scrollY > animItemOffset - animItemStartPoint && screenY < animItemOffset + animHeight) {
       animItem.classList.add('active');
     }
   });

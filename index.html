@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap" rel="stylesheet">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="./css/intlTelInput.css">
     <title>Студия вышивки</title>
 </head>
@@ -363,38 +365,6 @@
         <section class="examples" id="examples">
             <div class="examples-wrapper">
                 <h2>Наши работы</h2>
-                <!-- <div class="examples-slider">
-                    <div class="slider-item">
-                        <img class="slider-img" src="./images/slider/brand1.jpg" alt="slider">
-                    </div>
-                    <div class="slider-item">
-                        <img class="slider-img" src="./images/slider/brand2.jpg" alt="slider">
-                    </div>
-                    <div class="slider-item">
-                        <img class="slider-img" src="./images/slider/brand3.jpg" alt="slider">
-                    </div>
-                    <div class="slider-item">
-                        <img class="slider-img" src="./images/slider/brand4.jpg" alt="slider">
-                    </div>
-                    <div class="slider-item">
-                        <img class="slider-img" src="./images/slider/brand5.jpg" alt="slider">
-                    </div>
-                    <div class="slider-item">
-                        <img class="slider-img" src="./images/slider/brand6.jpg" alt="slider">
-                    </div>
-                </div> -->
-                <div class="examples-items">
-                    <div class="left-column">
-                        <img class="slider-img" id='ph1' src="./images/slider/brand1.jpg" alt="slider">
-                        <img class="slider-img" id='ph2' src="./images/slider/brand2.jpg" alt="slider">
-                        <img class="slider-img" id='ph3' src="./images/slider/brand3.jpg" alt="slider">
-                    </div>
-                    <div class="right-column">
-                        <img class="slider-img" id='ph4' src="./images/slider/brand4.jpg" alt="slider">
-                        <img class="slider-img" id='ph5' src="./images/slider/brand5.jpg" alt="slider">
-                        <img class="slider-img" id='ph6' src="./images/slider/brand6.jpg" alt="slider">
-                    </div>
-                </div>
             </div>
         </section>
         <section class="questions">
@@ -422,7 +392,7 @@
             </div>
         </section>
         <section class="location" id="location">
-            <div class="map"></div>
+            <div id='map'></div>
             <div class="contacts">
                 <div class="contacts-wrapper">
                     <ul>
@@ -483,6 +453,7 @@
     <script type="module" src="./js/mainAnimItems.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="./js/slider.js"></script>
+    <script src="./js/mapboxGL.js"></script>
 </body>
 
 </html>

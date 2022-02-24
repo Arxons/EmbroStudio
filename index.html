@@ -339,7 +339,15 @@
               <p>Имя</p>
               <input class="user-name" placeholder="Представьтесь" name="name" type="text" />
               <p>Email</p>
-              <input class="user-email" placeholder="Укажите почту" name="email" type="text" />
+              <input
+                class="user-email"
+                placeholder="Укажите почту"
+                name="email"
+                type="text"
+                id="email"
+                onchange="valueChange(event)"
+              />
+              <p class="email-error" id="email-error">Введите существующий email</p>
               <p>Сообщение</p>
               <textarea class="user-description" name="text"></textarea>
               <p>Прикрепить файлы</p>

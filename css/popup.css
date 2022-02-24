@@ -1,0 +1,48 @@
+.popup__wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.363);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    top: 0;
+    /* transform: translateX(-100%); */
+    transition: 0.4s ease all;
+}
+
+.popup{
+    width: 600px;
+    height: 700px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-order__form{
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.submit-btn{
+    width: 200px;
+    height: 50px;
+    text-transform: uppercase;
+    border: 2px solid rgb(138, 8, 8);
+    border-radius: 0;
+    background-color: #fff;
+    transition: 0.3s ease;
+}
+
+.submit-btn:hover,
+.submit-btn:active,
+.submit-btn:focus{
+    color: white;
+    background-color: rgb(138, 8, 8);
+}

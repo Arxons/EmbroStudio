@@ -29,15 +29,20 @@ try {
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
     // Настройки вашей почты
-    $mail->Host       = 'smtp.yandex.by'; // SMTP сервера вашей почты
-    $mail->Username   = 'Zakaz-chick'; // Логин на почте
-    $mail->Password   = 'tnjaikwfzkfcfjbx'; // Пароль на почте
+    $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
+    $mail->Username   = 'sanekoir2015@gmail.com'; // Логин на почте
+    $mail->Password   = 'vjjbyhpcwfgemhle'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
-    $mail->Port       = 587;
-    $mail->setFrom('Zakaz-chick@yandex.by', 'Бизнес'); // Адрес самой почты и имя отправителя
+    $mail->Port       = 465;
+    $mail->setFrom('sanekoir2015@gmail.com'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress('sanekoir2015@gmail.com');  
+    $mail->addAddress('vasyrin1312@gmail.com');  
+    $mail->addAddress('vasyrin1312@gmail.com');  
+    $mail->addAddress('vasyrin1312@gmail.com');  
+    $mail->addAddress('vasyrin1312@gmail.com');  
+    $mail->addAddress('vasyrin1312@gmail.com');  
+    $mail->addAddress('vasyrin1312@gmail.com');  
 
 
     // Прикрипление файлов к письму

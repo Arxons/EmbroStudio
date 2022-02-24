@@ -1,6 +1,6 @@
 let input = document.querySelector('#user-phone');
 window.intlTelInput(input, {
-  initialCountry: 'BY',
+  initialCountry: 'RU',
   utilsScript: './js/utils.js?<%= time %>',
   placeholderNumberType: 'MOBILE',
   preferredCountries: ['BY', 'RU'],

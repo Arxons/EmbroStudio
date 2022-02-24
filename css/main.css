@@ -600,6 +600,7 @@ button {
 }
 
 .order-btn {
+  display: inline-block;
   width: 130px;
   height: 45px;
 
@@ -616,6 +617,11 @@ button {
   transition: 0.5s all ease;
 
   margin-top: 10%;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 2%;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .order-btn:hover {
@@ -752,7 +758,7 @@ button {
   margin: 0 auto;
 }
 
-.description-wrapper p {
+.description-wrapper h2 {
   width: 60%;
 
   font-family: var(--main-font);

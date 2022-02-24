@@ -789,7 +789,7 @@ button {
 }
 
 .questions {
-  height: 650px;
+  height: 950px;
 
   background-image: url(../images/threads.webp);
   background-repeat: no-repeat;
@@ -821,8 +821,8 @@ button {
 }
 
 .redbox {
-  width: 750px;
-  height: 400px;
+  width: 650px;
+  height: 720px;
 
   background-color: var(--red);
 
@@ -849,20 +849,19 @@ button {
 
   color: rgb(255, 255, 255);
 
-  text-align: center;
+  text-align: start;
   width: 70%;
 
   margin: 0 auto;
-  padding-top: 5%;
+  padding-top: 3%;
+  margin-bottom: 1%;
 
   opacity: 0.5;
 }
 
 .input-phone {
   text-align: center;
-  margin-top: 5%;
 
-  display: flex;
   justify-content: space-around;
 }
 
@@ -875,7 +874,10 @@ button {
   border-radius: 10px;
 }
 
-.user-phone {
+.user-phone,
+.user-name,
+.user-email,
+.user-description {
   width: 457px;
   height: 55px;
 
@@ -885,15 +887,30 @@ button {
   border: none;
   border-radius: 10px;
 
-  padding: 0;
+  box-sizing: border-box;
+  padding: 1%;
 }
 
 .iti__selected-dial-code {
   font-family: var(--main-font);
 }
 
+.add-files {
+  width: 457px;
+
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 600;
+
+  border: none;
+  outline: none;
+
+  margin-bottom: 3%;
+}
+
 .submit-btn {
   width: 215px;
+  height: 55px;
 
   font-family: var(--main-font);
   font-size: 18px;
@@ -902,6 +919,8 @@ button {
   border: none;
   outline: none;
   border-radius: 10px;
+
+  margin-top: 7%;
 }
 
 .location {
@@ -1381,7 +1400,7 @@ footer {
 
   .redbox {
     width: 550px;
-    height: 450px;
+    height: 720px;
   }
 
   .input-phone {

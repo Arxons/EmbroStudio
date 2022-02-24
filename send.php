@@ -1,25 +1,22 @@
 <?php
-// Файлы phpmailer
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
-// Переменные, которые отправляет пользователь
 $name = $_POST['name'];
 $email = $_POST['email'];
 $text = $_POST['text'];
 $file = $_FILES['myfile'];
+$number = $_POST['phone']
 
-// Формирование самого письма
-$title = "Заголовок письма";
+$title = "Новая заявка";
 $body = "
 <h2>Новое письмо</h2>
 <b>Имя:</b> $name<br>
-<b>Почта:</b> $email<br><br>
-<b>Сообщение:</b><br>$text
-";
+<b>Почта:</b> $email<br>
+<b>Телефон:</b> $number<br><br>
+<b>Сообщение:</b><br>$text";
 
-// Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer(true);
 try {
     $mail->isSMTP();   
@@ -28,24 +25,15 @@ try {
     //$mail->SMTPDebug = 2;
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
-    // Настройки вашей почты
-    $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-    $mail->Username   = 'sanekoir2015@gmail.com'; // Логин на почте
-    $mail->Password   = 'vjjbyhpcwfgemhle'; // Пароль на почте
+    $mail->Host       = 'smtp.gmail.com';
+    $mail->Username   = 'sanekoir2015@gmail.com';
+    $mail->Password   = 'vjjbyhpcwfgemhle';
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('sanekoir2015@gmail.com'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('sanekoir2015@gmail.com');
 
-    // Получатель письма
-    $mail->addAddress('vasyrin1312@gmail.com');  
-    $mail->addAddress('vasyrin1312@gmail.com');  
-    $mail->addAddress('vasyrin1312@gmail.com');  
-    $mail->addAddress('vasyrin1312@gmail.com');  
-    $mail->addAddress('vasyrin1312@gmail.com');  
-    $mail->addAddress('vasyrin1312@gmail.com');  
+    $mail->addAddress('vasyrin1312@gmail.com');   
 
-
-    // Прикрипление файлов к письму
 if (!empty($file['name'][0])) {
     for ($ct = 0; $ct < count($file['tmp_name']); $ct++) {
         $uploadfile = tempnam(sys_get_temp_dir(), sha1($file['name'][$ct]));
@@ -58,12 +46,11 @@ if (!empty($file['name'][0])) {
         }
     }   
 }
-// Отправка сообщения
+
 $mail->isHTML(true);
 $mail->Subject = $title;
 $mail->Body = $body;    
 
-// Проверяем отравленность сообщения
 if ($mail->send()) {$result = "success";} 
 else {$result = "error";}
 
@@ -72,5 +59,4 @@ else {$result = "error";}
     $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
 }
 
-// Отображение результата
 echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);

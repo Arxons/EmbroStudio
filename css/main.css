@@ -854,6 +854,15 @@ button {
   opacity: 0.5;
 }
 
+#email-error {
+  font-size: 18px;
+  margin-top: -7%;
+  color: var(--red);
+  opacity: 1;
+  padding-left: 1%;
+  visibility: hidden;
+}
+
 .input-phone {
   text-align: center;
 
@@ -884,6 +893,12 @@ button {
 
   box-sizing: border-box;
   padding: 1%;
+}
+
+.user-email.error {
+  color: var(--red);
+  height: 75px;
+  padding-bottom: 4%;
 }
 
 .iti__selected-dial-code {
@@ -989,7 +1004,6 @@ footer {
 .questions-wrapper {
   overflow: hidden;
 }
-
 
 
 
@@ -1269,10 +1283,6 @@ footer {
     height: 50%;
   }
 
-  .contacts-wrapper {
-    margin-top: 120px;
-  }
-
   .contacts-wrapper ul li {
     font-size: 18px;
 
@@ -1362,6 +1372,18 @@ footer {
   .description-wrapper,
   .questions-wrapper {
     max-width: 310px;
+  }
+
+  .user-phone,
+  .user-name,
+  .user-email,
+  .user-description,
+  .add-files {
+    width: 73%;
+  }
+
+  .questions-wrapper {
+    width: 100%;
   }
 
   .about-wrapper {
@@ -1490,13 +1512,9 @@ footer {
     font-size: 16px;
   }
 
-  .questions {
-    height: 495px;
-  }
 
   .redbox {
-    width: 310px;
-    height: 335px;
+    width: 100%;
   }
 
   .redbox h2 {
@@ -1507,21 +1525,17 @@ footer {
     font-size: 16px;
   }
 
+  .iti {
+    width: 73%;
+  }
+
   .user-phone {
-    width: 290px;
+    width: 100%;
     height: 45px;
   }
 
   .submit-btn {
     height: 45px;
-  }
-
-  .location {
-    height: 530px;
-  }
-
-  .contacts-wrapper {
-    margin-top: 125px;
   }
 
   .contacts-wrapper ul li {

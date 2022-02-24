@@ -859,6 +859,15 @@ button {
   opacity: 0.5;
 }
 
+#email-error {
+  font-size: 18px;
+  margin-top: -7%;
+  color: var(--red);
+  opacity: 1;
+  padding-left: 1%;
+  visibility: hidden;
+}
+
 .input-phone {
   text-align: center;
 
@@ -889,6 +898,12 @@ button {
 
   box-sizing: border-box;
   padding: 1%;
+}
+
+.user-email.error {
+  color: var(--red);
+  height: 75px;
+  padding-bottom: 4%;
 }
 
 .iti__selected-dial-code {

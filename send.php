@@ -7,7 +7,7 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $text = $_POST['text'];
 $file = $_FILES['myfile'];
-$number = $_POST['phone']
+$number = $_POST['phone'];
 
 $title = "Новая заявка";
 $body = "
@@ -26,13 +26,13 @@ try {
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
     $mail->Host       = 'smtp.gmail.com';
-    $mail->Username   = 'sanekoir2015@gmail.com';
-    $mail->Password   = 'vjjbyhpcwfgemhle';
+    $mail->Username   = 'nebaldezh@gmail.com';
+    $mail->Password   = 'lvrifhwznnowjtyt';
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('sanekoir2015@gmail.com');
+    $mail->setFrom('nebaldezh@gmail.com');
 
-    $mail->addAddress('vasyrin1312@gmail.com');   
+    $mail->addAddress('hostbaldezh@gmail.com');   
 
 if (!empty($file['name'][0])) {
     for ($ct = 0; $ct < count($file['tmp_name']); $ct++) {

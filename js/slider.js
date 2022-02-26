@@ -2,12 +2,13 @@
 const sliderContent = document.querySelector('.slider__wrapper');
 const sliderCard = document.getElementsByClassName('.slider__card');
 const changeButton = document.querySelector('.new-items-btn')
+
 const itemsImgPack = ['cap', 'chevron', 'clothe', 'souvenir']
 
 for (let index = 1; index < 7; index++){
     sliderContent.innerHTML += `
     <div class="slider__card anim-items">
-        <img width="350px" height="350px" src="./images/caps/cap${index}.jpg" alt="img">
+        <img width="350px" height="350px" src="./images/caps/cap${index}.webp" alt="img">
     </div>
 `
 }
@@ -20,7 +21,7 @@ changeButton.addEventListener('click', ()=>{
     for (let index = 1; index < 7; index++){
         sliderContent.innerHTML += `
         <div class="slider__card anim-items">
-            <img width="350px" height="350px" src="./images/${item}s/${item}${index}.jpg" alt="img">
+            <img width="350px" height="350px" src="./images/${item}s/${item}${index}.webp" alt="img">
         </div>
     `
     }
